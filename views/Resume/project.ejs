@@ -1,0 +1,38 @@
+<%- include('../partials/header')%>
+<div class="container mt-5 p-3 bg-warning bg-opacity-50">
+    <ul class="d-flex justify-content-evenly fs-3">
+        <li><a href="/education">Eduaction</a></li>
+        <li><a href="/skill">Skill</a></li>
+        <li><a href="/project">Project</a></li>
+        <li><a href="/experience">Experience</a></li>
+        <li><a href="/interest">Interest</a></li>
+    </ul>
+    <hr />
+    <form action="/add-project" class="education mt-5 container d-flex justify-content-evenly flex-wrap w-75  " method="POST">
+        <input class="form-control w-50 ms-5  " type="text" placeholder="Project Name" name="project" />
+        <input class="form-control w-50 ms-5 mt-2 " type="text" placeholder="Technology" name="technology" />
+        <input class="form-control w-50 ms-5  mt-2" type="text" placeholder="Description" name="description" />
+        <input class="form-control w-50 ms-5  mt-2" type="text" placeholder="Link" name="link" /><br> <br>
+      
+
+        <button class="btn btn-dark mt-3 w-50">Add Project</button>
+    </form>
+    <hr />
+    <div class="d-flex flex-wrap">
+        <% user.project.forEach((e, i)=> { %>
+            <div class="card me-3 mb-3" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title"><%= e.project%></h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Technology Used-<%= e.technology%>  </h6>
+                    <h6> Description-<%= e.description%></h6>
+                    <p class="card-text">Link- <%= e.link%></p>
+                    <a href="/delete-pro/<%= i%>" class="btn btn-danger card-link">Remove</a>
+                </div>
+            </div>
+       
+        <% })%>
+    
+</div>
+</div>
+
+<%- include('../partials/footer')%>

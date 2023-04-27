@@ -1,0 +1,32 @@
+<%- include('./partials/header')%>
+<div class="sign bg-secondary w-100 d-flex justify-content-center align-items-center" style="height:595px;">
+<div class="container  form-control bg-danger-emphasis bg-opacity-50 pt-3 " style=" width: 700px; height: 80%;">
+<h1 class="resume text-primary">Create your account to build awesome resume</h1>
+<form action="/signup" method="post">
+<input class="form-control mb-2 p-2"  type="text" placeholder="Username" name="username">
+<input class="form-control mb-2 p-2 " type="email" placeholder="Email" name="email">
+<input class="form-control mb-2 p-2" type="password" placeholder="Password" name="password">
+<input class="form-control mb-2 p-2" type="text" placeholder="Contact" name="contact">
+<button class="btn btn-success fs-2 form-control mb-3">Create Account</button>
+</form>
+
+<p class="mt-3 fs-3">Already have an account? <a class="" href="/signin">signin</a></p>
+
+</div>
+</div>
+
+
+
+
+
+
+
+<%- include('./partials/footer') %>
+
+
+  
+
+
+
+
+  

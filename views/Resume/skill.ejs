@@ -1,0 +1,32 @@
+<%- include('../partials/header')%>
+<div class="container mt-5 p-3 bg-warning bg-opacity-50">
+    <ul class="d-flex justify-content-evenly fs-3">
+        <li><a href="/education">Eduaction</a></li>
+        <li><a href="/skill">Skill</a></li>
+        <li><a href="/project">Project</a></li>
+        <li><a href="/experience">Experience</a></li>
+        <li><a href="/interest">Interest</a></li>
+    </ul>
+    <hr />
+    <form action="/add-skill" class="education mt-5 container d-flex justify-content-evenly flex-wrap w-75" method="POST">
+        <input class="form-control w-50 me-1 mt-2 " type="text" placeholder="Skill" name="skill" /><br>
+        
+
+        <button class="btn btn-dark mt-3 w-50">Add Skill</button>
+    </form>
+    <hr />
+    <div class="d-flex flex-wrap">
+        <% user.skill.forEach((e, i)=> { %>
+            <div class="card me-3 mb-3" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title"><%= e.skill%></h5>
+                    <a href="/delete-skill/<%= i%>" class="btn btn-danger card-link">Remove</a>
+                </div>
+            </div>
+       
+        <% })%>
+    
+</div>
+</div>
+
+<%- include('../partials/footer')%>

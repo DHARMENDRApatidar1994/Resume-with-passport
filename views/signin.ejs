@@ -1,0 +1,32 @@
+<%- include('./partials/header')%>
+<div class="sign bg-secondary d-flex justify-content-center align-items-center" style="height: 597px;">
+<div class="container  w-50 form-control bg-success pt-3">
+    <form action="/signin" method="post" >
+
+<h1 class="sign text-dark">Signin to build resume</h1>
+
+<input class="form-control text-danger mb-3 fs-4" type="text" placeholder="username" name="username">
+<input class="form-control text-danger mb-3 fs-4" type="password" placeholder="password" name="password">
+<a class=" fs-3 float-end  " href="/forgetpassword">Forget Password</a><br>
+<button class="btn btn-white bg-white form-control fw-semibold fs-2">signin</button>
+</form>
+
+<p class="fs-3">Don't have an account? <a href="/signup">signup</a></p>
+
+</div>
+</div>
+
+
+
+
+
+
+<%- include('./partials/footer') %>
+
+
+  
+
+
+
+
+  

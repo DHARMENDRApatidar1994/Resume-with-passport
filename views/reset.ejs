@@ -1,0 +1,31 @@
+<%- include('./partials/header')%>
+<div class="d-flex justify-content-center  align-items-center bg-dark w-100" style="height: 590px;">
+<div class="contain  w-50 form-control  mb-3 ">
+    <form action="/resetpassword" method="post" >
+
+<h1 class="sign text-success">Continue Changing Password</h1>
+
+<input class="form-control text-danger mb-3" type="text" placeholder="oldpassword" name="oldpassword">
+<input class="form-control text-danger mb-3" type="password" placeholder="newpassword" name="newpassword">
+<button class="btn btn-success form-control">Reset Password</button>
+</form>
+
+<p class="fs-3">Don't have an account? <a href="/signup">signup</a></p>
+
+</div>
+</div>
+
+
+
+
+
+
+<%- include('./partials/footer') %>
+
+
+  
+
+
+
+
+  
